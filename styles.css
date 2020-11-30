@@ -11,13 +11,12 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "";
+  font-family: "Open Sans";
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Open Sans";
   font-weight: 300;
 }
 
@@ -41,15 +40,19 @@ h3 {
   list-style-type: none;
 }
 
-.nav__link a {
+.nav__link a,
+.nav__link--selected a {
+  font-size: 0.9rem;
   color: var(--tertiary-color);
   text-decoration: none;
   padding: 1rem 1.2rem;
+  margin: 0 0.1rem;
 }
 
 .nav__link--selected a {
-  color: var(--tertiary-color);
-  text-decoration: none;
-  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--tertiary-color);
+}
+
+.nav__link a:hover {
   border-bottom: 1px solid var(--tertiary-color);
 }
