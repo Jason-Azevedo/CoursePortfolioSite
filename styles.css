@@ -17,7 +17,14 @@ body {
 h1,
 h2,
 h3 {
+  padding: 0;
+  margin: 0;
   font-weight: 300;
+}
+
+p {
+  line-height: 1.7rem;
+  letter-spacing: 0.02rem;
 }
 
 /* NAV */
@@ -29,6 +36,7 @@ h3 {
 }
 
 .nav__header {
+  margin: 1.2rem 0;
   flex: 3 1 600px;
   text-align: center;
   color: var(--font-color);
@@ -40,19 +48,49 @@ h3 {
   list-style-type: none;
 }
 
+.nav__link a {
+  color: #444;
+}
+
 .nav__link a,
 .nav__link--selected a {
   font-size: 0.9rem;
-  color: var(--tertiary-color);
   text-decoration: none;
   padding: 1rem 1.2rem;
   margin: 0 0.1rem;
+  transition: 0.25s;
 }
 
-.nav__link--selected a {
-  border-bottom: 1px solid var(--tertiary-color);
-}
-
+.nav__link--selected a,
 .nav__link a:hover {
+  color: var(--tertiary-color);
   border-bottom: 1px solid var(--tertiary-color);
+}
+
+/* BLOCKS */
+.landing {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("img/landing-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.landing__content {
+  max-width: 600px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.landing__content h1 {
+  font-size: 2rem;
+  color: #ececec;
+  font-weight: 400;
+}
+
+.landing__content p {
+  color: #dbdbdb;
 }
