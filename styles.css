@@ -31,6 +31,10 @@ ul {
   list-style-type: none;
 }
 
+a {
+  color: var(--tertiary-color);
+}
+
 /* NAV */
 .nav {
   display: flex;
@@ -120,9 +124,27 @@ ul {
   padding: 1rem;
 }
 
-.flex--row-center {
+.flex--row-center,
+.flex--row {
   display: flex;
+}
+
+.flex--row-center {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 0;
+}
+
+.flex--row > * {
+  width: calc(50% - 2rem);
+  height: 100%;
+  padding: 1rem;
+}
+
+#footer-copy {
+  background: #444444;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin: 0;
 }
