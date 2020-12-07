@@ -117,6 +117,12 @@ a {
   image-rendering: crisp-edges;
 }
 
+.vrt--line {
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #707070;
+}
+
 /* UTILS */
 .container {
   max-width: calc(1100px - 2rem);
@@ -124,8 +130,13 @@ a {
   padding: 1rem;
 }
 
+.flex--se {
+  justify-content: space-evenly;
+}
+
 .flex--row-center,
-.flex--row {
+.flex--row-2,
+.flex--se {
   display: flex;
 }
 
@@ -135,7 +146,8 @@ a {
   padding: 1rem 0;
 }
 
-.flex--row > * {
+/* flex--row-2 is intended for two children only */
+.flex--row-2 > * {
   width: calc(50% - 2rem);
   height: 100%;
   padding: 1rem;
